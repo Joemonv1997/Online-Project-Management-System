@@ -1,0 +1,23 @@
+<header class="p-3 text-bg-dark" style="padding-top:25px;">  
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-10 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-primary">Project Management</a></li>
+            <li></li>
+        </ul>
+        <button type="button" class="btn btn-danger">Create Issue</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {% if request.user.is_authenticated %}
+        <div class="text-end">
+            <button type="button" class="btn btn-outline-dark me-2">{{request.user.username}}</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='{% url 'Logout' %}'">Logout</button>
+        </div>
+        {% else %}
+        <div class="text-end">
+            <button type="button" class="btn btn-outline-dark me-2" onclick="location.href='{% url 'Login' %}'">Login</button>
+            <button type="button" class="btn btn-warning" onclick="location.href='{% url 'Register' %}'">Register</button>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </header>

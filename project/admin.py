@@ -1,3 +1,7 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import Project,Ticket,Sprint
+# # Register your models here.
+# admin.site.register(Update)
+admin.site.register(Project)
+admin.site.register(Ticket)
+admin.site.register(Sprint)

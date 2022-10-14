@@ -4,3 +4,5 @@ mainapp/__pycache__
 authenticate/__pycache__
 env
 .DS_Store
+project/migrations/__pycache__
+authenticate/migrations/__pycache__
